@@ -1,0 +1,37 @@
+/*
+ * HillbillyCascade - Create cascading drop downs for SharePoint 2013/2016/O365 classic forms
+ * Version 2.0 
+ * @requires jQuery v1.7 or greater 
+ * @requires unslider 
+ *
+ * Copyright (c) 2017 Mark Rackley / PAIT Group
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/**
+ * @description Create cascading drop downs for SharePoint 2013/2016/O365 classic forms
+ * @type jQuery
+ * @name HillbillyCascade
+ * @category Plugins/PAITSlider
+ * @author Mark Rackley / http://www.markrackley.net / mrackley@paitgroup.com
+ *
+ * 
+ * 	Usage: 
+ * 
+ *  var cascadeArray = new Array();
+ * 
+ * 	cascadeArray.push({
+ *	    	parentFormField: "County", //Display name on form of field from parent list
+ *			childList: "Cities", //List name of child list
+ *			childLookupField: "Title", //Internal field name in Child List used in lookup
+ *			childFormField: "City", //Display name on form of the child field
+ *			parentFieldInChildList: "County", //Internal field name in Child List of the parent field
+ *			firstOptionText: "< Select a City >"
+ *		});
+ *		
+ *		
+ *		$().HillbillyCascade(cascadeArray);
+ * 
+ */
+
+Hillbilly cascasde works with mutli-level cascading dropdowns, simply create an array entry for each subsequent cascade. 
