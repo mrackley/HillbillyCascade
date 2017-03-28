@@ -12,7 +12,8 @@
 			childLookupField: "Title", //Internal field name in Child List used in lookup
 			childFormField: "County", //Display name on form of the child field
 			parentFieldInChildList: "State", //Internal field name in Child List of the parent field
-			firstOptionText: "< Select a County >"
+			firstOptionText: "< Select a County >",
+			dropDownItemCount:"999" //Number of Items to Display on dropdown to remove 100 item limitation
 		});
 
 		cascadeArray.push({
@@ -21,7 +22,8 @@
 			childLookupField: "Title", //Internal field name in Child List used in lookup
 			childFormField: "City", //Display name on form of the child field
 			parentFieldInChildList: "County", //Internal field name in Child List of the parent field
-			firstOptionText: "< Select a City >"
+			firstOptionText: "< Select a City >",
+			dropDownItemCount:"999" //Number of Items to Display on dropdown to remove 100 item limitation
 		});
 		
 		
