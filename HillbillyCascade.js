@@ -26,7 +26,8 @@
  *			childLookupField: "Title", //Internal field name in Child List used in lookup
  *			childFormField: "City", //Display name on form of the child field
  *			parentFieldInChildList: "County", //Internal field name in Child List of the parent field
- *			firstOptionText: "< Select a City >"
+ *			firstOptionText: "< Select a City >",
+ *          dropDownItemCount:"999" //Number of Items to Display on dropdown to remove 100 item limitation
  *		});
  *		
  *		
@@ -76,7 +77,7 @@ $.fn.HillbillyCascade= function (optionsArray)
             url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/GetByTitle('"+params.childList+
                 "')/items?$select=Id,"+params.childLookupField+","+params.parentFieldInChildList+
                 "/Id&$expand="+params.parentFieldInChildList+"/Id&$filter="+params.parentFieldInChildList+
-                "/Id eq "+ parentID+"&$orderby=" + params.childLookupField,
+                "/Id eq "+ parentID+"&$orderby=" + params.childLookupField+" &$top="+params.dropDownItemCount,
             type: "GET",
             dataType: "json",
             headers: {
