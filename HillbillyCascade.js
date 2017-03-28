@@ -76,7 +76,7 @@ $.fn.HillbillyCascade= function (optionsArray)
             url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/GetByTitle('"+params.childList+
                 "')/items?$select=Id,"+params.childLookupField+","+params.parentFieldInChildList+
                 "/Id&$expand="+params.parentFieldInChildList+"/Id&$filter="+params.parentFieldInChildList+
-                "/Id eq "+ parentID+"&$orderby=" + params.childLookupField+" &$top=9999",
+                "/Id eq "+ parentID+"&$orderby=" + params.childLookupField+" &$top="+params.dropDownItemCount,
             type: "GET",
             dataType: "json",
             headers: {
